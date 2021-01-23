@@ -4,8 +4,9 @@ public class Golfer implements Subject {
 
     ArrayList<Observer> observers;
     private String name;
-    
+
     public Golfer(String name){
+        observers = new ArrayList<Observer>();
         this.name = name;
     }
 
@@ -22,7 +23,7 @@ public class Golfer implements Subject {
     @Override
     public void notifyObserver(int strokes, int par) {
         for(Observer observer : observers){
-            
+            observer.update(strokes, par);
         }
 
     }
