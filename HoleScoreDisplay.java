@@ -1,6 +1,6 @@
-import javax.lang.model.util.ElementScanner6;
 
-public class HoleScoreDisplay implements Observer {
+
+public class HoleScoreDisplay implements Observer{
     private Subject golfer;
     private int strokes;
     private int par;
@@ -21,10 +21,10 @@ public class HoleScoreDisplay implements Observer {
         System.out.println("Current Hole Stats:");
         int aPar = strokes - par;
         if(strokes < par){
-            System.out.println(aPar +"under par");
+            System.out.println(aPar +" under par");
         }
         else if (strokes > par) {
-            System.out.println(aPar + "over par");
+            System.out.println(aPar + " over par");
         }
         else{
             System.out.println("Made par");

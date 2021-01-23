@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 
+
 public class Golfer implements Subject {
 
     ArrayList<Observer> observers;
@@ -26,6 +27,10 @@ public class Golfer implements Subject {
             observer.update(strokes, par);
         }
 
+    }
+
+    public void enterScore(int strokes,int par){
+        notifyObserver(strokes, par);
     }
 
     public String getName() {
